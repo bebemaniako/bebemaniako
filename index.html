@@ -1,0 +1,174 @@
+<!DOCTYPE html> <!--pon ht 5 enter para la estructura basica-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bebémaniako</title>
+  <link rel="stylesheet" href="index.css">
+  <link href="https://db.onlinewebfonts.com/c/6eda3943441dcfaa842c5c5f6c6aac56?family=MoMA+Sans+Web+Bold+Regular" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@700&display=swap" rel="stylesheet"> <!--Moma-->
+</head>
+<body>
+
+  <div class="loader-container">
+    <div class="loader">
+      <img src="media/elmejor.png" alt="Loading...">
+      <h5 id="percentage">1%</h5>
+    </div>
+  </div>
+
+
+  <header>
+    <div class="container">
+      <p class="logo">Mariana's <br> MoMA</p>
+      <img src="media/frank.png">
+    </div>
+  </header>
+
+  <section>
+    <div class="img-container1">
+      <img src="media/portada.JPEG">
+    </div>
+  </section>
+
+
+  <section id="hero">
+    <div class="container">
+      <h2>The <br>Coolest <br> Woman <br>You <br>Know<br></h2>
+      <img src="baby.png" alt="Bebe maniaco">
+    </div>
+  </section>
+
+
+  <section id="Bruselas">
+    <div class="containertext">
+      <p>Change the world with your new brain if you want <br> it's up to you</p>
+    </div>  
+    <div class="containertitle">
+      <h2>COOLEST</h2>
+    </div>  
+  </section>
+
+  <section id="STUFF">
+    <div class="container">
+      <h2>STUFF</h2>
+      <a href="FOTOS.html"><img id="camara" src="media/camara.png" alt="camara"></a>
+      <h4>Click en la imagen</h4>
+      <a href="https://open.spotify.com/user/d9y410wfxdipm7o876o5sikvd?si=58fd40f1ed534a40" target="_blank">
+      <img id="tocadiscos" src="media/tocadiscos.png" alt="Tocadiscos">
+      </a>
+      <h4>Aquí también</h4>
+      <a href="SIlly.html">
+      <img id="carta" src="media/carta.png" alt="carta"></a>
+      <h4>Silly little words (pícale)</h4>
+    </div>
+  </section>
+
+  <section id="Clothes">
+    <div class="container">
+      <img src="media/Clothes.jpg" alt="Clothes">
+      <a href="Closet.html"><h3>Coolest<br>Clothes</h3></a>
+    </div>
+  </section>
+
+  <section id="Artist">
+    <div class="container">
+      <a href="Artist.html"><h3>Coolest<br>Artist</h3><h4>(Puro artista recio <br>a few of them)</h4></a>
+      <img src="media/artist.jpg" alt="Clothes">
+    </div>
+  </section>
+
+  <section id="Love">
+    <div class="container">
+      <img src="media/otro.jpg" alt="Clothes">
+      <a href="coolestlove.html"><h3>Coolest<br>love</h3></a>
+    </div>
+  </section>
+
+  <section id="Relleno">
+    <div class="container">
+      <div class="text-content">
+        <h3>Puro<br>Relleno</h3>
+        <h3 id="bajito">(ni le piques)</h3>
+      </div>
+      <img src="media/Relleno.jpg" alt="Clothes">
+    </div>
+  </section>
+
+  <section id="Tambien">
+    <div class="container">
+      <img src="media/Tambien.jpg" alt="Clothes">
+      <h3>Este<br>Tambn</h3>
+    </div>
+  </section>
+
+  <!--
+  <section id="Funniest">
+    <div class="container">
+      <a href="#"><h3>Coolest<br>y Funniest</h3><h4>(Este si echatelo)</h4></a>
+      <img src="media/funniest.jpg" alt="Funniest">
+    </div>
+  </section> -->
+
+  <section id="video">
+    <div id="container">
+      <video src="media/video.mp4" width="300" height="300" controls autoplay muted></video>
+      <h3>Sound   on!!!</h3>
+    </div>
+  </section>
+
+  <section id="final">
+    <div class="container">
+      <img src="media/babyfinal.png" alt="baby">
+      <div id="containertext"> 
+        <h2>The<br>Coolest<br>Baby</h2>
+        <h4>(soy yo)</h4>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>Havefun bebé</p>
+      <p>&copy;TheCoooooooolest2024</p>
+    </div>
+  </footer>
+  <script>
+
+        // Verifica si el usuario ya ha visitado la página
+    window.addEventListener('load', function () {
+      const loaderContainer = document.querySelector('.loader-container');
+
+        // Si es la primera visita, muestra el loader y lo oculta después de 7.5 segundos
+        setTimeout(function () {
+          loaderContainer.style.display = 'none';
+          document.body.classList.add('loaded');
+        }, 6000);
+
+    });
+
+    let percentageElement = document.getElementById("percentage");
+    let percentage = 1;
+
+    function updatePercentage() {
+      if (percentage <= 100) {
+        percentageElement.textContent = `${percentage}%`;
+        percentage++;
+        setTimeout(updatePercentage, 50); // Velocidad de actualización (50 ms)
+      }
+    }
+
+updatePercentage();
+
+     
+  </script>
+</body>
+</html>

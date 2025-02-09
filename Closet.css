@@ -1,0 +1,173 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 1em;
+    font-family: "Libre Franklin", sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background-color: rgb(255, 255, 255);
+}
+
+header {
+    background-color: rgb(234, 74, 0); 
+    font-size: 1.7em; 
+    top: 0;
+    left: 0;
+    right: 0;
+    height: auto; 
+    padding: 0px 20px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    letter-spacing: 1px;
+}
+
+header .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; 
+    width: 100%; 
+}
+
+header .logo {
+    color: rgba(255, 255, 255, 0.915);
+    margin-right: 1vh; 
+}
+
+header img {
+    width: 6vh; 
+    height: auto;
+    position: fixed; 
+    z-index: 1;
+    right: 10%; 
+    top: 2%; 
+
+}
+.primera {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center;    /* Centrar verticalmente */
+    width: 70%;
+    height: auto;
+}
+
+h2{
+    letter-spacing: 10px;
+    font-size: 1em;
+    text-align: center;
+}
+
+h4{
+    letter-spacing: 8px;
+    font-size: 0.5em;
+    text-align: center;
+}
+
+.rojo {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    background-color: rgb(224, 77, 4);
+    height: 7vh;
+    width: 100%;
+    margin: 0;
+    font-size: 1em;
+    color: white;
+}
+.rosa {   
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    background-color: rgb(255, 72, 0);
+    height: 7vh;
+    width: 100%;
+    margin: 0;
+    font-size: 1em;
+    color: white;
+}
+.verde {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    background-color: rgb(242, 93, 34);
+    height: 7vh;
+    width: 100%;
+    margin: 0;
+    font-size: 1em;
+    color: white; 
+}
+.amarillo {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    background-color: rgb(235, 111, 63);
+    height: 7vh;
+    width: 100%;
+    margin: 0;
+    font-size: 1em;
+    color: white; 
+}
+.azul {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    background-color: rgb(237, 124, 80);
+    height: 7vh;
+    width: 100%;
+    margin: 0;
+    font-size: 1em;
+    color: white;  
+}
+.morado {  
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    background-color: rgb(239, 137, 96);
+    height: 7vh;
+    width: 100%;
+    margin: 0;
+    font-size: 1em;
+    color: white;  
+}
+.naranja {  
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    background-color: rgb(242, 149, 113);
+    height: 7vh;
+    width: 100%;
+    margin: 0;
+    font-size: 1em;
+    color: white;  
+}
+
+.borde{
+    border-left: 10px solid rgb(224, 77, 4);
+    border-right: 10px solid rgb(224, 77, 4);  
+}
+.primera {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */   /* Centrar verticalmente */
+    width: 70%;
+    height: auto;
+    margin-left: 10vh;
+}
+.contenedor {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten si son muchos */
+    gap: 25px; /* Espaciado entre elementos */
+    padding: 10px;
+    border: 10px solid rgb(242, 149, 113); /* Define un borde sólido, de 10px, color naranja */
+}
+
+.contenedor img {
+    max-width: 40vh; /* Define un tamaño máximo para las imágenes */
+    height: auto; /* Mantiene las proporciones */
+    border-radius: 0px; /* (Opcional) Añade esquinas redondeadas */
+}

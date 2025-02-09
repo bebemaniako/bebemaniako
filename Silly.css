@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 1em;
+    font-family: "Libre Franklin", sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background-image: url("media/back2.jpg");
+    background-size: contain;
+    
+    background-color:rgb(18, 13, 80);
+    
+}
+
+
+header {
+    background-color: rgb(255, 255, 255) /*rgb(196, 222, 252)*/; 
+    font-size: 1.5em; 
+    color: black;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: auto; 
+    padding: 0px 20px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    letter-spacing: 1px;
+}
+
+header .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; 
+    width: 100%; 
+}
+
+header .logo {
+    color: #005b8d;
+    margin-right: 1vh; 
+}
+
+header img {
+    width: 7vh; 
+    height: auto;
+    position:absolute; 
+    z-index: 1;
+    right: 10%; 
+    top: 1%; 
+}
+
+.container2 {
+    display: flex;
+    flex-direction: column ;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center;    /* Centrar verticalmente */
+    width: 100%;
+    height: auto;
+    padding-top: 2vh;
+    background-color: rgba(250, 235, 215, 0);
+    color: rgb(255, 255, 255);
+    letter-spacing: 15px;
+    font-size: .8em;
+    text-align: center;
+    text-decoration: solid ;
+    margin-bottom: 30px;
+    
+}
+
+h5{
+    color: white;
+    letter-spacing: 10px;
+}
+
+.container2 img {
+    max-width: 70%;
+}
+
+.images {
+    display: block;
+    padding: 20px 10px;
+    margin: 0 auto;
+    column-count: 1;
+    font-family: arial;
+    background-size: contain;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20%;
+  }
+  
+  .gallery-item {
+    break-inside: avoid;
+    margin-bottom: 16px;
+  }
+  
+  .gallery-item figure {
+    margin: 0;
+    position: relative;
+    text-align: center; /* Asegura que el contenido del figure esté centrado */
+  }
+  
+  .gallery-item img {
+    width: 80%;
+    border-radius: 14px;
+    display: block; /* Necesario para que margin auto funcione correctamente */
+    margin: 0 auto; /* Centra horizontalmente la imagen */
+  }
+  
+  #randomImage {
+    max-width: 100%;
+    display: block;
+    margin-bottom: 0px;
+    
+}
+
+.random-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.button-image {
+    max-width: 150px; /* Set the width of the button image to make it smaller */
+    height: auto; /* Maintain aspect ratio */
+}

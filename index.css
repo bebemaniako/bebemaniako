@@ -1,0 +1,500 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 1em; /* Tamaño de fuente base ajustado */
+    font-family: "Libre Franklin", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 1px;
+}
+
+h1, h2, h3, p {
+    margin: 0; /* Quitar márgenes predeterminados para un mejor control */
+}
+
+h1 {
+    font-size: 1.8em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+p {
+    font-size: 1em;
+}
+
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(16, 0, 27); /* Fondo blanco con opacidad */
+    background-image: url("media/loadddd.jpg");
+    background-size: contain;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Asegura que esté encima de todo */
+    text-align: center;
+    color: #e1be10;
+    font-size: 1em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  #percentage {
+    font-size: 1.5rem;
+}
+  .loader img {
+    width: 230px; /* Tamaño del loader */
+    height: auto;
+    animation: spin 4s linear infinite; /* Animación de giro */
+  }
+  
+  /* Animación de rotación */
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  body.loaded .loader-container {
+    display: none;
+  }
+
+  header {
+    background-color: rgb(220, 3, 3);
+    font-size: 1.8em;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    padding: 1.875vh 6vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+@keyframes growShrink {
+    0% {
+        transform: scale(1); /* Tamaño normal */
+    }
+    50% {
+        transform: scale(1.2); /* Se agranda un 20% */
+    }
+    100% {
+        transform: scale(1); /* Vuelve al tamaño normal */
+    }
+}
+
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+header .logo {
+    color: rgba(255, 255, 255, 0.915);
+    margin-right: 1.2em;
+}
+
+header img {
+    width: 1.5em;
+    position: fixed;
+    right: 10vw; /* Ajustado desde 10% */
+    top: 2vh; /* Ajustado desde 2% */
+    display: block;
+}
+
+.img-container1 {
+    width: 100%;
+    padding-top: 0px;
+    background-color: rgb(255, 0, 0);
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.img-container1 img {
+    width: 100%;
+    height: auto;
+}
+
+#hero {
+    padding: 5vh 2vw 0vh 2vw; /* Ajustado desde 30px 10px 0px 10px */
+    background-color: rgb(248, 156, 28);
+    background-image: url("media/babyyyyy.jpg");
+    background-size: contain;
+    color: rgb(255, 255, 255);
+    font-size: .8em;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: "Syne", sans-serif;
+}
+
+#hero .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding-left: 3.75vw; /* Ajustado desde 30px */
+}
+
+#hero img {
+    width: 57vw; /* Ajustado desde 57% */
+    height: auto;
+    padding-right: 1.875vw; /* Ajustado desde 15px */
+    padding-top: 5vh; /* Ajustado desde 50px */
+}
+
+#hero h2 {
+    padding-bottom: 3.75vh; /* Ajustado desde 30px */
+    padding-left: 2.5vh;
+}
+
+hr {
+    border-style: solid;
+    border-color: #ff3500;
+    margin: 2.5vh 0; /* Ajustado desde 20px 0 */
+}
+
+#Bruselas {
+    padding: 5vh 5vw; /* Ajustado desde 30px 20px */
+    background-color: #eb008b;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#Bruselas .containertitle {
+    font-size: 1em;
+    -webkit-text-stroke: .5px rgb(255, 255, 255);
+    color: transparent;
+}
+
+#Bruselas .containertext {
+    font-size: 0.9em;
+    text-align: left;
+}
+
+#STUFF .container {
+    padding: 5vh 5vw; /* Ajustado desde 30px 30px */
+    background-color: rgb(0, 0, 0);
+    background-image: url("media/back3.jpg");
+    background-size: contain;
+    color: rgb(216, 240, 217);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 15px;
+}
+#STUFF h2{
+    padding-left: 6-vw;
+}
+#STUFF .container img {
+    width: 90vw; /* Ajustado desde 90% */
+    height: auto;
+    padding-top: 4.44vh; /* Ajustado desde 40px */
+}
+
+#STUFF h4 {
+    font-size: 0.7em;
+    letter-spacing: 4px;
+}
+
+#STUFF #camara {
+    margin-left: 0vw; /* Ajustado desde 12px */
+}
+
+#STUFF #tocadiscos {
+    margin-left: 1vw; /* Ajustado desde 10px */
+}
+
+#STUFF #carta {
+    width: 70vw; /* Ajustado desde 70% */
+    height: auto;
+    margin-left: 4.5vw; /* Ajustado desde 45px */
+    justify-self: center;
+}
+
+#Clothes .container {
+    margin: 0;
+    padding: 0;
+    background-color: #025c23;
+    color: #fff0f0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    text-align: center;
+}
+
+#Clothes img {
+    width: 60vw; /* Ajustado desde 60% */
+    height: auto;
+}
+
+#Clothes a {
+    text-decoration: none;
+}
+
+#Clothes h3 {
+    padding-right: 3vh;
+    color: #fff3f3;
+    font-size: 1.2em;
+    text-align: center; 
+    margin: 0;
+}
+
+#Artist .container {
+    margin: 0;
+    padding: 0;
+    background-color: #DCFF5A;
+    color: #fff7f7;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+#Artist img {
+    width: 60vw; /* Ajustado desde 60% */
+    height: auto;
+}
+
+#Artist a {
+    text-decoration: none;
+}
+
+#Artist h3, #Artist h4 {
+    color: #000000;
+    padding: 0;
+    text-align: center;
+    padding: 0px 4vw; /* Ajustado desde 40px */
+}
+
+#Artist h3 {
+    font-size: 1.2em;
+}
+
+#Artist h4 {
+    font-size: 0.3em;
+}
+
+#Love .container {
+    margin: 0;
+    padding: 0;
+    background-color: #ff3500;
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+#Love img {
+    width: 60vw; /* Ajustado desde 60% */
+    height: auto;
+}
+
+#Love a {
+    text-decoration: none;
+}
+
+#Love h3 {
+    padding-right: 3vh;
+    color: #fff3f3;
+    font-size: 1.2em;
+    text-align: center; 
+    margin: 0;
+}
+
+#Relleno .container {
+    margin: 0;
+    padding: 0;
+    background-color: #0401da;
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+#Relleno img {
+    width: 60vw; /* Ajustado desde 60% */
+    height: auto;
+}
+
+#Relleno h3 {
+    padding: 0px 4vw; 
+    padding-left: 4vh;
+    color: #fff3f3;
+    font-size: 1.2em;
+    text-align: center; 
+    margin: 0;
+}
+
+#Relleno h3#bajito {
+    font-size: 0.3em;
+    padding: 0px 4vw; 
+    padding-left: 4vh;
+}
+
+#Tambien .container {
+    margin: 0;
+    padding: 0;
+    background-color: #025c23;
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    align-content: center;
+}
+
+#Tambien img {
+    width: 60vw; /* Ajustado desde 60% */
+    height: auto;
+}
+
+#Tambien h3 {
+    padding: 0px 4vw; 
+    padding-right: 4vh;
+    color: #fff3f3;
+    font-size: 1.2em;
+    text-align: center; 
+    margin: 0;
+}
+
+/*
+#Funniest .container {
+    margin: 0;
+    padding: 0;
+    background-color: ;
+    color: #000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+#Funniest img {
+    width: 60vw; 
+    height: auto;
+}
+
+#Funniest a {
+    text-decoration: none;
+}
+
+#Funniest h3, #Funniest h4 {
+    color: #000;
+    padding: 0;
+    text-align: center;
+    padding: 0px 4vw; Ajustado desde 40px 
+}
+
+#Funniest h3 {
+    font-size: 1.2em;
+}
+
+#Funniest h4 {
+    font-size: 0.3em;
+}
+*/
+
+#video {
+    display: flex;
+    justify-content: center;
+    padding: 10vh 0 8vh 0; /* Ajustado desde 70px 60px */
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+}
+
+#container {
+    max-width: 100%;
+}
+
+video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+#video h3 {
+    padding: 2vh 1vw; /* Ajustado desde 20px 10px */
+    text-align: center;
+    font-size: 1em;
+    letter-spacing: 4px;
+}
+
+#final {
+    padding: 5vh 2vw 0vh 0vw; /* Ajustado desde 8px 10px 0px 15px */
+    background-color: #fffafa;
+    background-image: url("media/backie.jpg");
+    background-size: contain;
+    color: rgb(255, 255, 255);
+    font-size: 1em;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: "Syne", sans-serif;
+}
+
+#final .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding-right: 1vw; /* Ajustado desde 10px */
+}
+
+#final img {
+    width: 57vw; /* Ajustado desde 57% */
+    height: auto;
+    padding-right: 2vw; /* Ajustado desde 15px */
+    padding-top: 5vh; /* Ajustado desde 50px */
+}
+
+#containertext {
+    padding: 0px 4vw; /* Reduce el padding horizontal */
+}
+
+footer {
+    padding: 2vh 3vh; /* Ajustado desde 20px 20px */
+    background-color: rgb(220, 3, 3);
+}

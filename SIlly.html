@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Silly.css">
+    <title>Bebémaniako</title>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <p class="logo">Mariana's <br> MoMA</p>
+            <img src="media/fotosillywords.png" alt="Header image">
+        </div>
+    </header>
+
+    <div class="container2">
+        <h2>Thot/Thought <br>Baby</h2>
+        <img src="media/bebesilly.png" alt="Baby image">
+    </div>
+
+
+    <!-- Galería completa 
+    <div class="gallery">
+        <div class="gallery-item">
+            <figure>
+                <img src="sillyyy/sil (1).jpg" alt="dog">
+            </figure>
+        </div>
+        <div class="gallery-item">
+            <figure>
+                <img src="sillyyy/sil (3).jpg" alt="dog">
+            </figure>
+        </div>
+        <div class="gallery-item">
+            <figure>
+                <img src="sillyyy/sil (4).jpg" alt="dog">
+            </figure>
+        </div>
+        <div class="gallery-item">
+            <figure>
+                <img src="sillyyy/sil (5).jpg" alt="dog">
+            </figure>
+        </div>
+        <div class="gallery-item">
+            <figure>
+                <img src="sillyyy/sil (6).jpg" alt="dog">
+            </figure>
+        </div>
+        <div class="gallery-item">
+            <figure>
+                <img src="sillyyy/sil (7).jpg" alt="dog">
+            </figure>
+        </div>
+        <div class="gallery-item">
+            <figure>
+                <img src="sillyyy/sil (8).jpg" alt="dog">
+            </figure>
+        </div>
+    </div> -->
+
+    <div style="text-align: center; padding: 0px 10px;">
+        <img id="randomImage" src="sillyyy/sil (1).jpg" alt="Random image" style="max-width: 100%; display: block; margin-bottom: 0px;">
+        <button onclick="showRandomImage()" class="random-button">
+            <img src="media/fortuneeeee.png" alt="Random Button" class="button-image">
+        </button>
+        <h5>What u need i guess <br>pícale
+        </h5>
+        
+    </div>
+    
+    <script>
+        // Array con las rutas de las imágenes de la galería
+        const images = [
+            "sillyyy/sil  (1).jpg",
+            "sillyyy/sil  (2).jpg",
+            "sillyyy/sil  (3).jpg", 
+            "sillyyy/sil  (4).jpg",
+            "sillyyy/sil  (5).jpg",
+            "sillyyy/sil  (6).jpg",
+            "sillyyy/sil  (7).jpg",
+            "sillyyy/sil  (8).jpg",
+            "sillyyy/sil  (9).jpg",
+            "sillyyy/sil  (10).jpg",
+            "sillyyy/sil  (11).jpg",
+            "sillyyy/sil  (12).jpg",
+            "sillyyy/sil  (13).jpg",
+            "sillyyy/sil  (14).jpg",
+            "sillyyy/sil  (15).jpg",
+            "sillyyy/sil  (16).jpg",
+            "sillyyy/sil  (17).jpg",
+            "sillyyy/sil  (18).jpg",
+            "sillyyy/sil  (19).jpg",
+            "sillyyy/sil  (20).jpg",
+            "sillyyy/sil  (21).jpeg"
+        ];
+    
+        // Función para mostrar una imagen aleatoria
+        function showRandomImage() {
+            const randomIndex = Math.floor(Math.random() * images.length); // Selecciona un índice al azar
+            const randomImage = images[randomIndex]; // Obtén la imagen correspondiente
+            const imgElement = document.getElementById("randomImage");
+    
+            imgElement.src = randomImage; // Cambia la fuente de la imagen
+            imgElement.style.display = "block"; // Asegúrate de que la imagen se muestre
+        }
+    
+        // Mostrar una imagen inicial al cargar la página
+        window.onload = function () {
+            const initialImageIndex = Math.floor(Math.random() * images.length); // Selecciona una imagen al azar
+            document.getElementById("randomImage").src = images[initialImageIndex];
+            document.getElementById("randomImage").style.display = "block";
+        };
+    </script>
+</body>
+</html>
