@@ -264,7 +264,7 @@ hr {
 }
 
 #Clothes h3 {
-    padding-right: 3vh;
+    padding-right: 4vh;
     color: #fff3f3;
     font-size: 1.2em;
     text-align: center; 
@@ -296,7 +296,7 @@ hr {
     color: #000000;
     padding: 0;
     text-align: center;
-    padding: 0px 4vw; /* Ajustado desde 40px */
+    padding: 0px 5vw; /* Ajustado desde 40px */
 }
 
 #Artist h3 {
