@@ -252,6 +252,7 @@ hr {
     justify-content: space-between;
     align-content: center;
     text-align: center;
+    font-family: "Syne", sans-serif;
 }
 
 #Clothes img {
@@ -281,6 +282,7 @@ hr {
     align-items: center;
     justify-content: space-between;
     text-align: center;
+    font-family: "Syne", sans-serif;
 }
 
 #Artist img {
@@ -296,7 +298,7 @@ hr {
     color: #000000;
     padding: 0;
     text-align: center;
-    padding: 0px 6vw; /* Ajustado desde 40px */
+    padding: 0px 7.5vw; /* Ajustado desde 40px */
 }
 
 #Artist h3 {
@@ -317,6 +319,7 @@ hr {
     align-items: center;
     justify-content: space-between;
     text-align: center;
+    font-family: "Syne", sans-serif;
 }
 
 #Love img {
@@ -346,6 +349,7 @@ hr {
     align-items: center;
     justify-content: space-between;
     text-align: center;
+    font-family: "Syne", sans-serif;
 }
 
 #Relleno img {
@@ -379,6 +383,7 @@ hr {
     justify-content: space-between;
     text-align: center;
     align-content: center;
+    font-family: "Syne", sans-serif;
 }
 
 #Tambien img {
