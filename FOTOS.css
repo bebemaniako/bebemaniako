@@ -15,6 +15,47 @@ body {
 h1, h2, h3, p {
     margin: 0; /* Quitar márgenes predeterminados para un mejor control */
 }
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(16, 0, 27); /* Fondo blanco con opacidad */
+    background-image: url("media/bakcgrounphot.jpg");
+    background-size: cover;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Asegura que esté encima de todo */
+    text-align: center;
+    color: #a4df30;
+    font-size: 1em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  #percentage {
+    font-size: 1.5rem;
+}
+  .loader img {
+    width: 230px; /* Tamaño del loader */
+    height: auto;
+    animation: spin 4s linear infinite; /* Animación de giro */
+  }
+  
+  /* Animación de rotación */
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  body.loaded .loader-container {
+    display: none;
+  }
 header {
     background-color: rgb(255, 0, 0); 
     font-size: 1.7em; 
