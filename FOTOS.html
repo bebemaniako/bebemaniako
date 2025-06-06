@@ -8,11 +8,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@700&display=swap" rel="stylesheet"> <!--Moma-->
 </head>
 <body>
-  <div class="loader-container-2">
-      <div class="loader">
-        <img src="media/phot.png" alt="Loading...">
-        <h5 id="percentage-2">1%</h5>
-      </div>
+  <div class="loader-container">
+    <div class="loader">
+      <img src="media/phot.png" alt="Loading...">
+      <h5 id="percentage">1%</h5>
+    </div>
   </div>
   <header>
     <div class="container">
@@ -186,26 +186,33 @@
     </div>
   </div>
    <script>
-  window.addEventListener('load', function () {
-    const loaderContainer = document.querySelector('.loader-container-2');
-    setTimeout(function () {
-      loaderContainer.style.display = 'none';
-      document.body.classList.add('loaded');
-    }, 4000); // 3 segundos
-  });
 
-  let percentageElement = document.getElementById("percentage-2");
-  let percentage = 1;
+        // Verifica si el usuario ya ha visitado la página
+    window.addEventListener('load', function () {
+      const loaderContainer = document.querySelector('.loader-container');
 
-  function updatePercentage() {
-    if (percentage <= 100) {
-      percentageElement.textContent = `${percentage}%`;
-      percentage++;
-      setTimeout(updatePercentage, 40); // 3 segundos en total
+        // Si es la primera visita, muestra el loader y lo oculta después de 7.5 segundos
+        setTimeout(function () {
+          loaderContainer.style.display = 'none';
+          document.body.classList.add('loaded');
+        }, 8000);
+
+    });
+
+    let percentageElement = document.getElementById("percentage");
+    let percentage = 1;
+
+    function updatePercentage() {
+      if (percentage <= 100) {
+        percentageElement.textContent = `${percentage}%`;
+        percentage++;
+        setTimeout(updatePercentage, 50); // Velocidad de actualización (50 ms)
+      }
     }
-  }
 
-  updatePercentage();
-</script>
+updatePercentage();
+
+     
+  </script>
 </body>
 </html>
