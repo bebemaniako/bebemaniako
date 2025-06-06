@@ -195,7 +195,7 @@
         setTimeout(function () {
           loaderContainer.style.display = 'none';
           document.body.classList.add('loaded');
-        }, 8000);
+        }, 4000);
 
     });
 
@@ -206,7 +206,7 @@
       if (percentage <= 100) {
         percentageElement.textContent = `${percentage}%`;
         percentage++;
-        setTimeout(updatePercentage, 50); // Velocidad de actualización (50 ms)
+        setTimeout(updatePercentage, 40); // Velocidad de actualización (50 ms)
       }
     }
 
