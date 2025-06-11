@@ -185,28 +185,23 @@
       <img src="fotoss (154).jpeg">
     </div>
   </div>
-   <script>
+  <script>
       window.addEventListener('load', function () {
-        const loaderContainer = document.querySelector('.loader-container');
-        const percentageElement = document.getElementById("percentage");
-        let percentage = 0;
+      const loaderContainer = document.querySelector('.loader-container');
+      const percentageElement = document.getElementById("percentage");
+      let percentage = 0;
     
-        function updatePercentage() {
-          if (percentage <= 100) {
-            percentageElement.textContent = `${percentage}%`;
-            percentage++;
-            setTimeout(updatePercentage, 45); // Actualiza cada 45ms (100 x 45 = 4500ms)
-          }
-        }
-    
-        updatePercentage();
-    
-        // Oculta el loader después de 4.5 segundos
-        setTimeout(function () {
+      const interval = setInterval(() => {
+        if (percentage < 100) {
+          percentage++;
+          percentageElement.textContent = `${percentage}%`;
+        } else {
+          clearInterval(interval);
           loaderContainer.style.display = 'none';
           document.body.classList.add('loaded');
-        }, 4500);
-      });
-</script>
+        }
+      }, 30); // Ajusta para más velocidad
+    });
+  </script>
 </body>
 </html>
