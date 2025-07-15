@@ -191,17 +191,20 @@
       const percentageElement = document.getElementById("percentage");
       let percentage = 0;
     
-      const interval = setInterval(() => {
-        if (percentage < 100) {
-          percentage++;
+      function updatePercentage() {
+        if (percentage <= 100) {
           percentageElement.textContent = `${percentage}%`;
+          percentage++;
+          setTimeout(updatePercentage, 45);
         } else {
-          clearInterval(interval);
+          // ocultar loader
           loaderContainer.style.display = 'none';
           document.body.classList.add('loaded');
         }
-      }, 30); // Ajusta para más velocidad
+      }
+    
+      updatePercentage();
     });
-  </script>
+ </script>
 </body>
 </html>
