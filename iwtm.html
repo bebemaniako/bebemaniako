@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bebémaniako</title>
+  <link rel="stylesheet" href="iwtmm.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <img src="media/stamp.png" alt="Logo" />
+    </div>
+  </header>
+
+  <main class="main-container">
+    <canvas id="main-canvas"></canvas>
+    <div class="controls">
+      <button id="btn-clear">Borrar</button>
+      <button id="btn-save">Enviar</button>
+    </div>
+    <div class="botonis">
+      <img src="media/han1.png" />.
+      <img id="arch" src="media/han2.png" />
+    </div>
+  </main>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-storage-compat.js"></script>
+
+
+  <script>
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyB7F_EjWjTyqM3o9LboZo91I-5yyqadFQk",
+      authDomain: "bebemaniakoo.firebaseapp.com",
+      projectId: "bebemaniakoo",
+      storageBucket: "bebemaniakoo.firebasestorage.app",
+      messagingSenderId: "161408349871",
+      appId: "1:161408349871:web:c2cb9282eec3bd5d82865a"
+    };
+
+// Initialize Firebase
+    const firebaseApp = firebase.initializeApp(firebaseConfig);
+    const storage = firebase.storage();
+
+    // Código del canvas y dibujo
+    const mainCanvas = document.getElementById("main-canvas");
+    const context = mainCanvas.getContext("2d");
+
+    let initialX;
+    let initialY;
+    let correccionX = 0;
+    let correccionY = 0;
+
+    function ajustarCanvas() {
+      const posicion = mainCanvas.getBoundingClientRect();
+      
+      // Ajustamos el tamaño del canvas según el contenedor
+      mainCanvas.width = posicion.width;
+      mainCanvas.height = posicion.height;
+
+      correccionX = posicion.left;
+      correccionY = posicion.top;
+    }
+
+    const dibujar = (x, y) => {
+      context.beginPath();
+      context.moveTo(initialX, initialY);
+      context.lineWidth = 3;
+      context.strokeStyle = "#000";
+      context.lineCap = "round";
+      context.lineJoin = "round";
+      context.lineTo(x, y);
+      context.stroke();
+      initialX = x;
+      initialY = y;
+    };
+
+    // Función para iniciar el trazo
+    const iniciarTrazo = (evt) => {
+      evt.preventDefault();
+      let x, y;
+
+      // Para ratón
+      if (evt.type === "mousedown") {
+        x = evt.offsetX;
+        y = evt.offsetY;
+      }
+      // Para pantalla táctil
+      else if (evt.type === "touchstart") {
+        const touch = evt.touches[0];
+        x = touch.clientX - correccionX;
+        y = touch.clientY - correccionY;
+      }
+
+      initialX = x;
+      initialY = y;
+      dibujar(initialX, initialY);
+
+      // Agregar los eventos de movimiento
+      mainCanvas.addEventListener("mousemove", moviendo);
+      mainCanvas.addEventListener("touchmove", moviendo, { passive: false });
+    };
+
+    // Función para continuar el dibujo
+    const moviendo = (evt) => {
+      evt.preventDefault();
+      let x, y;
+
+      // Para ratón
+      if (evt.type === "mousemove") {
+        x = evt.offsetX;
+        y = evt.offsetY;
+      }
+      // Para pantalla táctil
+      else if (evt.type === "touchmove") {
+        const touch = evt.touches[0];
+        x = touch.clientX - correccionX;
+        y = touch.clientY - correccionY;
+      }
+
+      dibujar(x, y);
+    };
+
+    // Función para finalizar el trazo
+    const finalizarTrazo = () => {
+      mainCanvas.removeEventListener("mousemove", moviendo);
+      mainCanvas.removeEventListener("touchmove", moviendo);
+    };
+
+    // Limpiar el canvas
+        document.getElementById("btn-clear").addEventListener("click", () => {
+          context.clearRect(0, 0, mainCanvas.width, mainCanvas.height);
+        });
+
+        // Función para subir la imagen del canvas a Firebase Storage
+    document.getElementById("btn-save").addEventListener("click", () => {
+      // Convertir el canvas a un Blob
+      mainCanvas.toBlob((blob) => {
+        // Generar un nombre único basado en el timestamp
+        const timestamp = new Date().toISOString().replace(/[:.]/g, "-");
+        const storageRef = storage.ref().child(`dibujos/dibujo-${timestamp}.png`);
+
+        // Subir el Blob a Firebase Storage
+        storageRef.put(blob).then(() => {
+          // Si la subida es exitosa, mostrar un mensaje
+          alert("¡Tu dibujo fue enviado con éxito!");
+        }).catch((error) => {
+          // Si hay un error, mostrarlo
+          alert("Error al enviar: " + error.message);
+        });
+      }, "image/png");  // Formato de la imagen
+    });
+
+    // Ajuste de tamaño del canvas en carga y redimensionamiento
+    window.addEventListener("load", ajustarCanvas);
+    window.addEventListener("resize", ajustarCanvas);
+
+    // Eventos de inicio y fin de trazo
+    mainCanvas.addEventListener("mousedown", iniciarTrazo);
+    mainCanvas.addEventListener("mouseup", finalizarTrazo);
+    mainCanvas.addEventListener("touchstart", iniciarTrazo, { passive: false });
+    mainCanvas.addEventListener("touchend", finalizarTrazo);
+  </script>
+</body>
+</html>
