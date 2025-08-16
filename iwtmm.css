@@ -127,13 +127,12 @@ button:hover {
     display: block;
 }
 
-/* --------- Ajustes responsive --------- */
 @media (max-width: 600px) {
     canvas {
-        width: 70vw;
-        height: 70vw;
-        max-width: 280px;
-        max-height: 280px;
+        width: 80vw;       /* más grande en pantallas pequeñas */
+        height: 90vw;
+        max-width: 320px;  /* límite para que no se salga */
+        max-height: 320px;
     }
 
     .controls {
@@ -155,8 +154,10 @@ button:hover {
     }
 
     #segunda {
-        width: 28vh;
-        max-width: 180px;
-        margin-top: 3vh;
+        width: 32vh;       /* un poco más grande */
+        max-width: 200px;
+        margin-top: 3vh;   /* espacio debajo de las manos */
+        display: block;    /* asegurar que siempre se muestre */
     }
 }
+
