@@ -51,34 +51,31 @@ header img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;  /* subir contenido */
     touch-action: none;
-    padding: 10vh 2vw;
+    padding: 12vh 2vw 4vh 2vw;   /* más espacio arriba por el header */
     box-sizing: border-box;
-    margin-top: 80px; /* espacio por el header */
 }
 
 #primera {
     width: 50vh;
     max-width: 320px;
     height: auto;
-    margin: 0;
+    margin-bottom: 2vh;  /* separar del canvas */
 }
 
 canvas {
     background-color: rgb(241, 245, 245);
-    width: 80vw;
-    height: 80vw;
-    max-width: 350px;
-    max-height: 350px;
+    width: 85vw;
+    height: 85vw;
+    max-width: 380px;
+    max-height: 380px;
     display: block;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    margin-top: 3vh;
 }
 
 .controls {
-    position: relative;
-    margin-top: 4vh;
+    margin-top: 3vh;
     display: flex;
     gap: 5vw;
     flex-direction: row;
@@ -105,7 +102,7 @@ button:hover {
 }
 
 .botonis {
-    margin-top: 5vh;
+    margin-top: 4vh;
     display: flex;
     gap: 5vw;
     justify-content: center;
@@ -121,18 +118,25 @@ button:hover {
 
 #segunda {
     width: 40vh;
-    max-width: 250px;
+    max-width: 260px;
     height: auto;
-    margin-top: 4vh; /* espacio debajo de las manos */
+    margin-top: 4vh;  /* siempre visible debajo de manos */
     display: block;
 }
 
+/* --------- Ajustes responsive --------- */
 @media (max-width: 600px) {
+    #primera {
+        width: 40vh;
+        max-width: 260px;
+        margin-bottom: 2vh;
+    }
+
     canvas {
-        width: 80vw;       /* más grande en pantallas pequeñas */
+        width: 90vw;       /* más grande en móvil */
         height: 90vw;
-        max-width: 320px;  /* límite para que no se salga */
-        max-height: 320px;
+        max-width: 400px;
+        max-height: 400px;
     }
 
     .controls {
@@ -145,7 +149,7 @@ button:hover {
     }
 
     .botonis {
-        margin-top: 4vh;
+        margin-top: 3vh;
     }
 
     .botonis img {
@@ -154,10 +158,8 @@ button:hover {
     }
 
     #segunda {
-        width: 32vh;       /* un poco más grande */
-        max-width: 200px;
-        margin-top: 3vh;   /* espacio debajo de las manos */
-        display: block;    /* asegurar que siempre se muestre */
+        width: 34vh;       /* más visible */
+        max-width: 220px;
+        margin-top: 3vh;
     }
 }
-
