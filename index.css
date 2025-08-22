@@ -350,7 +350,6 @@ hr {
     justify-content: space-between;
     text-align: center;
     font-family: "Syne", sans-serif;
-    text-decoration: none;
 }
 
 #Relleno img {
@@ -371,6 +370,7 @@ hr {
     font-size: 0.3em;
     padding: 0px 4vw; 
     padding-left: 4vh;
+    text-decoration: none;
 }
 
 #Tambien .container {
@@ -508,4 +508,5 @@ footer {
     padding: 2vh 3vh; /* Ajustado desde 20px 20px */
     background-color: rgb(220, 3, 3);
 }
+
 
