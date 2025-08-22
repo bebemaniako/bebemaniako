@@ -373,7 +373,7 @@ hr {
     padding-left: 4vh;
 }
 
-#Relleno h3 a {
+#Relleno a {
     text-decoration: none;   /* quita el subrayado */
     color: inherit;          /* hereda el color del h3 */
 }
@@ -513,6 +513,7 @@ footer {
     padding: 2vh 3vh; /* Ajustado desde 20px 20px */
     background-color: rgb(220, 3, 3);
 }
+
 
 
 
