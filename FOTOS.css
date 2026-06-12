@@ -26,12 +26,12 @@ h1, h2, h3, p {
     background-size: cover;
     background-position: center;
     
-    /* Alinea el spinner y el porcentaje uno abajo del otro en el centro */
+    /* Centra el logo arriba y el porcentaje abajo */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px; /* Espacio de separación entre el círculo y el número */
+    gap: 20px; /* Espacio entre el logo y el número */
     
     z-index: 9999; 
     text-align: center;
@@ -45,14 +45,17 @@ h1, h2, h3, p {
     font-weight: bold;
 }
 
-/* NUEVO SPINNER GENERADO CON CSS PURO */
+/* Contenedor del logo que aplica la animación */
 .loader {
-    width: 80px;
-    height: 80px;
-    border: 8px solid rgba(164, 223, 48, 0.2); /* Círculo base tenue */
-    border-top: 8px solid #a4df30;            /* Línea verde brillante que gira */
-    border-radius: 50%;
-    animation: spin 1s linear infinite;       /* Giro más rápido y fluido a 1 segundo */
+    width: 230px; /* Tu tamaño original de logo */
+    height: auto;
+}
+
+/* Hacemos que la imagen física del logo sea la que gire */
+.loader img {
+    width: 100%;
+    height: auto;
+    animation: spin 3s linear infinite; /* Giro fluido de tu logo */
 }
   
 /* Animación de rotación */
